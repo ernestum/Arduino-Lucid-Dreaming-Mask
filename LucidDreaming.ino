@@ -26,8 +26,9 @@ void setup() {
   doDemoMode();
 
   Serial.println("Waiting until you fall asleep ...");
-  for(int i = 0; i < minutesToFallAsleep; i++) {
-    delay(1000 * 60);
+  for(int i = 0; i < minutesToFallAsleep*2; i++) {
+    delay(1000*30);
+    Serial.print("Minute "); Serial.print(i/2); Serial.println(" passed half");
   }
 
   Serial.println("Recording baseline variance now");
